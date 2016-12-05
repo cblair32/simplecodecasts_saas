@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get "/about" => 'pages#about'
-  root 'pages#home'
+  resources :contacts
+  # This generates a few routes, bundle exec rake routs will show you them
+  get "/about" => 'pages#about' 
+  #This is the aout page and points to the specific controller file and a specific function in the file 
+  root 'pages#home' 
+  #This is the home page
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
