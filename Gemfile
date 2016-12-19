@@ -46,6 +46,8 @@ gem 'stripe', '1.16.1'
 
 #Use figaro to hide secret keys
 gem 'figaro', '1.0.0'
+
+gem 'credit_card_validator', '1.3.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
