@@ -1,10 +1,35 @@
-<%= link_to "Create your profile!", new_user_profile_path(current_user) if current_user %>
-
 <div class="jumbotron text-center">
     <h1>Welcome to Dev Match</h1>
     <h3>A membership based social media site where entrepeneurs and developers meet</h3>
 </div>
 <div class="row">
+  <% if user_signed_in? %>
+    <% if current_user.profile %>
+      <div class='col-md-6'>
+        <div class ="well">
+          <h2 class="text-center">Your profile</h2>
+          <h4 class="text-center"></h4>
+          <%= link_to "Edit your profile", "#", class: 'btn btn-primary btn-lg btn-block'%>
+          <%= link_to "View your profile!",user_path(current_user), class: 'btn btn-primary btn-lg btn-block'%>
+        </div>
+      </div>
+    <% else %>
+      <div class ="col-md-6">
+        <div class="well">
+          <h2 class="text-center">Create your profile</h2>
+          <h4 class="text-center">Show the DevMatch community what you're made of and what projects you've been a part of.</h4>
+          <%= link_to "Create your profile!", new_user_profile_path(current_user), class: 'btn btn-primary btn-lg btn-block'%>
+        </div>
+      </div>
+     <% end %>
+     <div class ="col-md-6">
+        <div class="well">
+          <h2 class="text-center">The Community</h2>
+          <h4 class="text-center">Visit the community and see who you can build something with!</h4>
+          <%= link_to "View the Community!", "#", class: 'btn btn-primary btn-lg btn-block' %>
+         </div>
+      </div>
+  <% else %>
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Basic Membership</h2>
@@ -20,4 +45,5 @@
         <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
+  <% end %>
 </div>
