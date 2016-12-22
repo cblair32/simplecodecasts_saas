@@ -28,11 +28,14 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    base_app (1.0.5)
     bcrypt (3.1.11)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -40,8 +43,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    credit_card_validator (1.3.2)
-      base_app (>= 1.0.5)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -76,6 +77,11 @@ GEM
     multi_json (1.12.1)
     netrc (0.11.0)
     orm_adapter (0.5.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.19.0)
     polyglot (0.3.5)
     rack (1.5.5)
@@ -156,12 +162,12 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 3.3.1)
   coffee-rails (= 4.0.0)
-  credit_card_validator (= 1.3.2)
   devise (= 3.4.1)
   figaro (= 1.0.0)
   font-awesome-sass (= 4.2.0)
   jbuilder (= 2.0)
   jquery-rails
+  paperclip (= 4.2.1)
   pg
   rails (= 4.1.0)
   rails_12factor
