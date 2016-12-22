@@ -9,7 +9,7 @@
         <div class ="well">
           <h2 class="text-center">Your profile</h2>
           <h4 class="text-center"></h4>
-          <%= link_to "Edit your profile", "#", class: 'btn btn-primary btn-lg btn-block'%>
+          <%= link_to "Edit your profile", edit_user_profile_path(current_user), class: 'btn btn-primary btn-lg btn-block'%>
           <%= link_to "View your profile!",user_path(current_user), class: 'btn btn-primary btn-lg btn-block'%>
         </div>
       </div>
